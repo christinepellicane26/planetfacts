@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Planets extends Component {
-  constructor(){
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       planets: []
     }
@@ -16,20 +16,33 @@ class Planets extends Component {
     })
   }
 
-render(){
-  const {planets} = this.state
-
-
-    <ul>
-    {planets.map(el => {
-      return(
-        <li key={el.name} {el.size}{el.year}{el.hightemp}{el.lowtemp}{el.surface}{el.numberofmoons} 
-       <Link to='/mercury'> 
-       </Link>
-        </li>
-         </ul>
-    )}
+  render() {
+    const { planets } = this.state
+    // console.log("this is our planets in planets.js", planets)
+    console.log(this.props)
+    return (
+      <ul>
+        {planets.map(el => {
+          return (
+            <li key={el.name}>
+            <p>{el.name}</p>
+          Size (radius miles): {el.radiusmiles}
+            <p>Year length: {el.year}</p>
+            <p>High temp: {el.hightemp}</p>
+            <p>Low temp: {el.lowtemp}</p>
+            <p>Surface type: {el.type}</p>
+            <p>Number of moons: {el.numberofmoons}</p>
+            </li>
+          )
+        })}
+      </ul>
+    )
+  }
+}
 
 
 
 export default Planets;
+
+
+//  </Link>//  <Link to='/mercury'> 
