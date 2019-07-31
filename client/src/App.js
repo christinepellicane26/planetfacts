@@ -1,25 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Students from './students/students.jsx';
+import Planets from './components/planets'; // /planets/planets
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Students />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reac
-        </a>
-      </header>
+
+
+class App extends Component {
+  constructor (props) {
+    super (props)
+    this.state = {
+      planet: undefined,
+      diameter: undefined,
+      hightemp: undefined,
+      lowtemp: undefined,
+      yearlength: undefined,
+      type: undefined,
+      numberofmoons: undefined,
+
+    }
+  }
+
+  selectPlanet = (planetName) => {
+    this.setState({
+      selectedPlanet: planetName
+    })
+  }
+
+render(){
+  return(
+    <div className = "container">
+    <div> Selected: <span> {this.state.selectedPlanet}</span></div>
+  
+    <div className = "Solar System"></div>
+    <Planet planet='Mercury' "Mercury" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Venus" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Earth" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Mars" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Jupiter" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Saturn" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Uranus" selectPlanet = {this.selectPlanet}/>
+    <Planet planet= "Neptune" selectPlanet = {this.selectPlanet}/>
     </div>
-  );
-}
+  )
+  <Images />
+
 
 export default App;
+
+  // const api_call = await fetch(`https://api....`)
+  // const data = await this.api_call.json();
+
+
+//images: https://epic.gsfc.nasa.gov/about/api
+//planet data in French/metric: https://api.le-systeme-solaire.net/en/
+//https://api.le-systeme-solaire.net/rest/
+
