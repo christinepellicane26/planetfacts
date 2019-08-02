@@ -39,6 +39,6 @@ class Planets extends Component {
       </ul>
     )
   }
-
+  }
 
 export default Planets;

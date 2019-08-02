@@ -15,7 +15,7 @@ app.listen(port, () => {
 
 //planet database
 const solarSystem= {
-Mercury: {radiusmiles: "1,516", year: '88 Earth days', hightemp: '800F', lowtemp: '-290F', type: 'rocky', numberofmoons: 0, img src ="https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png"},
+Mercury: {radiusmiles: "1,516", year: '88 Earth days', hightemp: '800F', lowtemp: '-290F', type: 'rocky', numberofmoons: 0, img:"https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png"},
 Venus: {radiusmiles: "3,760", year: '225 Earth days', hightemp: '880F', lowtemp: '880F', type: 'rocky', numberofmoons: 0, img:'url'},
 Earth: {radiusmiles: "3,959", year: '365 Earth days', hightemp: '136F', lowtemp: '-126F', type: 'rocky', numberofmoons: 1, img:'url'},
 Mars: {radiusmiles: "2,106", year: '670 Earth days', hightemp: '70F', lowtemp: '-225F', type: 'rocky', numberofmoons: 2, img:'url'},
@@ -32,15 +32,18 @@ app.get('/api/planets', (req, res) => {
   console.log(planets)
 });
 
-app.get('/api/planets/:name',(req,res)=>{
+app.get('/api/planets/:name',(req,res)=> {
   req.params.name
-  let planet = req.params.name
-  let planet = solarSystem{planet}
+  let planetString = req.params.name
+  let planetObject = solarSystem[planet]
 
-  }
+  
   res.json(planet)
+});
+
+
     // res.send(${data})
-)
+
 
   // for loop when using array:
   // for(el in planets){
