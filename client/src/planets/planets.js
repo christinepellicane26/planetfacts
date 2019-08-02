@@ -9,7 +9,7 @@ class Planets extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`/api/planets/${this.state.props.planet}`)
+    const res = await fetch(`/api/planets/${this.props.planet}`)
     const data = await res.json();
     this.setState({
       planet: data

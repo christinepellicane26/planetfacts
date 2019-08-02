@@ -33,7 +33,7 @@ app.get('/api/planets', (req, res) => {
 });
 
 app.get('/api/planets/:name',(req,res)=>{
-  req.params[name]
+  req.params.name
     // res.send(${data})
 })
 
