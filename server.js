@@ -21,13 +21,19 @@ const planets = [
 {name: 'Mars', radiusmiles: "2,106", year: '670 Earth days', hightemp: '70F', lowtemp: '-225F', type: 'rocky', numberofmoons: 2, img:'url'},
 {name: 'Jupiter', radiusmiles: "43,441", year: '4,333 Earth days', hightemp: '90,032F', lowtemp: '90,032F', type: 'gas giant', numberofmoons: 79, img:'url'},
 {name: 'Saturn', radiusmiles: "36,183", year: '10,759 Earth days', hightemp: '134F', lowtemp:'-280F' , type: 'gas giant', numberofmoons: 53, img:'url'},
-{name: 'Uranus', radiusmiles: "15,759", year: '30,687', hightemp: '-240F', lowtemp: '-370F', type: 'ice giant', numberofmoons: 27, img:'url'},
-{name: 'Neptune', radiusmiles: '15,299', year: '60,190', hightemp: '-328F', lowtemp:'-360F', type: 'ice giant', numberofmoons: 13, img:'url'}
+{name: 'Uranus', radiusmiles: "15,759", year: '30,687 Earth days', hightemp: '-240F', lowtemp: '-370F', type: 'ice giant', numberofmoons: 27, img:'url'},
+{name: 'Neptune', radiusmiles: "15,299", year: '60,190 Earth days', hightemp: '-328F', lowtemp:'-360F', type: 'ice giant', numberofmoons: 13, img:'url'}
 ];
 
 
 app.get('/api/planets', (req, res) => {
 
   res.json(planets);
+  console.log(planets)
 });
+
+app.get('/api/planets/:name',(req,res)=>{
+  req.params[name]
+    // res.send(${data})
+})
 

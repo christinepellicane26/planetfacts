@@ -9,24 +9,29 @@ class Planets extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch('/api/planets');
+    const res = await fetch(`/api/planets/${this.state.props.planet}`)
     const data = await res.json();
     this.setState({
-      planets: data
+      planet: data
     })
+    // console.log(data);
+    // console.log(this.state.planets)
   }
 
   render() {
-    const { planets } = this.state
-    // console.log("this is our planets in planets.js", planets)
-    console.log(this.props)
+    // const { planets } = this.state
+    // console.log("this is our planets in planets.js", this.state.planets)
+  
+    // console.log(this.state.planets)
+
     return (
       <ul>
-        {planets.map(el => {
-          return (
+        
+        {this.state.planets.map(el => 
+           (
             <li key={el.name}>
             <p>{el.name}</p>
-          Size (radius miles): {el.radiusmiles}
+            <p>Size (radius miles): {el.radiusmiles}</p>
             <p>Year length: {el.year}</p>
             <p>High temp: {el.hightemp}</p>
             <p>Low temp: {el.lowtemp}</p>
@@ -34,13 +39,11 @@ class Planets extends Component {
             <p>Number of moons: {el.numberofmoons}</p>
             </li>
           )
-        })}
+        )}
       </ul>
     )
   }
 }
-
-
 
 export default Planets;
 

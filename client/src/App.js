@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './images.js';
-import Planet from './planets/planets'; // /planets/planets
+import Planets from './planets/planets'; 
 
 
 class App extends Component {
@@ -26,21 +26,22 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div> Selected: <span> {this.state.selectedPlanet}</span></div>
+  <div className="container">
 
-        <div className="Solar System"></div>
-        <Planet planet='Mercury' selectPlanet={this.selectPlanet} />
-        {/* <Planet planet= "Venus" selectPlanet = {this.selectPlanet}/>
-    <Planet planet= "Earth" selectPlanet = {this.selectPlanet}/>
-    <Planet planet= "Mars" selectPlanet = {this.selectPlanet}/>
-    <Planet planet= "Jupiter" selectPlanet = {this.selectPlanet}/>
-    <Planet planet= "Saturn" selectPlanet = {this.selectPlanet}/>
-    <Planet planet= "Uranus" selectPlanet = {this.selectPlanet}/>
-    <Planet planet= "Neptune" selectPlanet = {this.selectPlanet}/> */}
+      // <Planets planet="Mercury" />
+      //  
+    <div className="Solar System"></div>
+    <Planets planet='Mercury' selectPlanet={this.selectPlanet} />
+    <Planets planet= "Venus" selectPlanet = {this.selectPlanet}/>
+    <Planets planet= "Earth" selectPlanet = {this.selectPlanet}/>
+    <Planets planet= "Mars" selectPlanet = {this.selectPlanet}/>
+    <Planets planet= "Jupiter" selectPlanet = {this.selectPlanet}/>
+    <Planets planet= "Saturn" selectPlanet = {this.selectPlanet}/>
+    <Planets planet= "Uranus" selectPlanet = {this.selectPlanet}/>
+    <Planets planet= "Neptune" selectPlanet = {this.selectPlanet}/>
       </div>
     )
-    // <Images />
+  //  <Images />
   }
 }
 
