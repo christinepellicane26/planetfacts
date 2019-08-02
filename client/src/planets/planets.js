@@ -19,15 +19,11 @@ class Planets extends Component {
   }
 
   render() {
-    // const { planets } = this.state
-    // console.log("this is our planets in planets.js", this.state.planets)
-  
-    // console.log(this.state.planets)
 
     return (
       <ul>
         
-        {this.state.planets.map(el => 
+        {this.state.planet(el => 
            (
             <li key={el.name}>
             <p>{el.name}</p>
@@ -43,9 +39,6 @@ class Planets extends Component {
       </ul>
     )
   }
-}
+
 
 export default Planets;
-
-
-//  </Link>//  <Link to='/mercury'> 
