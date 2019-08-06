@@ -27,24 +27,25 @@ class App extends Component {
   render() {
     return (
   <div className="container">
-
-      // <Planets planet="Mercury" />
-      //  
-    <div className="Solar System"></div>
-    <Planets planet='Mercury' selectPlanet={this.selectPlanet} />
-    <Planets planet= "Venus" selectPlanet = {this.selectPlanet}/>
-    <Planets planet= "Earth" selectPlanet = {this.selectPlanet}/>
-    <Planets planet= "Mars" selectPlanet = {this.selectPlanet}/>
-    <Planets planet= "Jupiter" selectPlanet = {this.selectPlanet}/>
-    <Planets planet= "Saturn" selectPlanet = {this.selectPlanet}/>
-    <Planets planet= "Uranus" selectPlanet = {this.selectPlanet}/>
-    <Planets planet= "Neptune" selectPlanet = {this.selectPlanet}/>
-      </div>
+    
+    
+    <div className="Solar System">
+     
+    <Planets planet="mercury" selectPlanet={this.selectPlanet} />
+    <Planets planet= "venus" selectPlanet = {this.selectPlanet} />
+    <Planets planet= "earth" selectPlanet = {this.selectPlanet} />
+    <Planets planet= "mars" selectPlanet = {this.selectPlanet} />
+    <Planets planet= "jupiter" selectPlanet = {this.selectPlanet} />
+    <Planets planet= "saturn" selectPlanet = {this.selectPlanet} />
+    <Planets planet= "uranus" selectPlanet = {this.selectPlanet} />
+    <Planets planet= "neptune" selectPlanet = {this.selectPlanet} /> 
+      
+    
+      </div>  
+    </div>
     )
-  //  <Images />
   }
 }
-
 
 export default App;
 

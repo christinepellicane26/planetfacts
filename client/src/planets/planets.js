@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import './App.css';
 
 class Planets extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Planets extends Component {
     const res = await fetch(`/api/planets/${this.props.planet}`)
     const data = await res.json();
     this.setState({
-      planet: data
+      planets: data
     })
     // console.log(data);
     // console.log(this.state.planets)
@@ -22,8 +23,8 @@ class Planets extends Component {
 
     return (
       <ul>
-        
-        {this.state.planet(el => 
+{/*         
+        {this.state.planets.map(el => 
            (
             <li key={el.name}>
             <p>{el.name}</p>
@@ -34,8 +35,11 @@ class Planets extends Component {
             <p>Surface type: {el.type}</p>
             <p>Number of moons: {el.numberofmoons}</p>
             </li>
+            
           )
-        )}
+        )} */}
+        <button><p>{this.state.planets.name}</p>
+        <img src={this.state.planets.img} alt = {this.state.planets.name}/></button>
       </ul>
     )
   }
