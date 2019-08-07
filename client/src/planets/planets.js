@@ -10,40 +10,41 @@ class Planets extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`./api/planets/${this.props.planet}`)
+    console.log(this.props.planet)
+    const res = await fetch(`/api/planets/${this.props.planet}`)
     // ${this.props.planet}
     const data = await res.json();
     this.setState({
       planets: data
     })
-    // console.log(data);
     // console.log(this.state.planets)
   }
 
   render() {
-    if(!this.state.planets) {
+    if (!this.state.planets) {
       return (
-        <div>loading...</div> 
+        <div>loading...</div>
+      )
+    } else {
+      return (
+        <div>
+          <ul>
+            {this.state.planets.name}
+            <button>
+              <img src={this.state.planets.img} alt={this.state.planets.name} />
+            </button>
+
+          </ul>
+        </div>
       )
     }
-    return (
-      <div>
-      <ul>
-     {this.state.planets.name}
-        <button>
-        <img src={this.state.planets.img} alt = {this.state.planets.name} />
-        </button>
-        
-      </ul>
-      </div>
-    )
   }
-  }
+}
 
 export default Planets;
 
-/*         
-        {this.state.planets.map(el => 
+/*
+        {this.state.planets.map(el =>
            (
             <li key={el.name}>
             <p>{el.name}</p>
@@ -54,6 +55,6 @@ export default Planets;
             <p>Surface type: {el.type}</p>
             <p>Number of moons: {el.numberofmoons}</p>
             </li>
-            
+
           )
         )} */
