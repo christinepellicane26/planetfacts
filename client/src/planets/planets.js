@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './App.css';
+
 
 class Planets extends Component {
   constructor(props) {
@@ -10,7 +10,8 @@ class Planets extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(`/api/planets/${this.props.planet}`)
+    const res = await fetch(`./api/planets/${this.props.planet}`)
+    // ${this.props.planet}
     const data = await res.json();
     this.setState({
       planets: data
@@ -20,10 +21,23 @@ class Planets extends Component {
   }
 
   render() {
-
     return (
+      <div>
       <ul>
-{/*         
+     {this.state.planets.name}
+        <button>
+        <img src={this.state.planets.img} alt = {this.state.planets.name} />
+        </button>
+        
+      </ul>
+      </div>
+    )
+  }
+  }
+
+export default Planets;
+
+/*         
         {this.state.planets.map(el => 
            (
             <li key={el.name}>
@@ -37,12 +51,4 @@ class Planets extends Component {
             </li>
             
           )
-        )} */}
-        <button><p>{this.state.planets.name}</p>
-        <img src={this.state.planets.img} alt = {this.state.planets.name}/></button>
-      </ul>
-    )
-  }
-  }
-
-export default Planets;
+        )} */

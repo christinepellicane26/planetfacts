@@ -22,7 +22,7 @@ const solarSystem= [
 {name: 'jupiter', radiusmiles: "43,441", year: '4,333 Earth days', hightemp: '90,032F', lowtemp: '90,032F', type: 'gas giant', numberofmoons: 79, img:"https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png"},
 {name: 'saturn', radiusmiles: "36,183", year: '10,759 Earth days', hightemp: '134F', lowtemp:'-280F' , type: 'gas giant', numberofmoons: 53, img:"https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png"},
 {name: 'uranus', radiusmiles: "15,759", year: '30,687 Earth days', hightemp: '-240F', lowtemp: '-370F', type: 'ice giant', numberofmoons: 27, img:"https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png"},
-{name: 'neptune', radiusmiles: "15,299", year: '60,190 Earth days', hightemp: '-328F', lowtemp:'-360F', type: 'ice giant', numberofmoons: 13, img:"https://solarsystem.nasa.gov/system/stellar_items/list_view_images/90_neptune_480x320.jpg"}
+{name: 'neptune', radiusmiles: "15,299", year: '60,190 Earth days', hightemp: '-328F', lowtemp:'-360F', type: 'ice giant', numberofmoons: 13, img:"https://solarsystem.nasa.gov/system/stellar_items/list_view_images/90_neptune_480x320.jpg"},
 ];
 
 
@@ -45,7 +45,7 @@ app.get('/api/planets/:name',(req,res)=> {
   //   return item.name == planetString
   // }
   // )
-  for (let i = 0; i < solarSystem.length-1; i++){
+  for (let i = 0; i < solarSystem.length; i++){
     if (solarSystem[i].name == planetString){
       res.json(solarSystem[i])
     }
@@ -58,8 +58,6 @@ app.get('/api/planets/:name',(req,res)=> {
   // }
   
 });
-
-
 
 // res.send(${data})
 

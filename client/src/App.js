@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import './images.js';
-import Planets from './planets/planets'; 
+import Planets from './planets/planets';
+// import Routes from './Routes'
 
 
 class App extends Component {
@@ -18,6 +17,9 @@ class App extends Component {
 
     }
   }
+
+ 
+
   selectPlanet = (planetName) => {
     this.setState({
       name: planetName
@@ -25,27 +27,28 @@ class App extends Component {
   }
 
   render() {
+
     return (
-  <div className="container">
-    
-    
-    <div className="Solar System">
-     
-    <Planets planet="mercury" selectPlanet={this.selectPlanet} />
-    <Planets planet= "venus" selectPlanet = {this.selectPlanet} />
-    <Planets planet= "earth" selectPlanet = {this.selectPlanet} />
-    <Planets planet= "mars" selectPlanet = {this.selectPlanet} />
-    <Planets planet= "jupiter" selectPlanet = {this.selectPlanet} />
-    <Planets planet= "saturn" selectPlanet = {this.selectPlanet} />
-    <Planets planet= "uranus" selectPlanet = {this.selectPlanet} />
-    <Planets planet= "neptune" selectPlanet = {this.selectPlanet} /> 
-      
-    
-      </div>  
-    </div>
+
+      <div className="container">
+
+        <div className="Solar System">
+
+          <Planets planet="mercury" selectPlanet={this.selectPlanet} />
+          <Planets planet="venus" selectPlanet={this.selectPlanet} />
+          <Planets planet="earth" selectPlanet={this.selectPlanet} />
+          <Planets planet="mars" selectPlanet={this.selectPlanet} />
+          <Planets planet="jupiter" selectPlanet={this.selectPlanet} />
+          <Planets planet="saturn" selectPlanet={this.selectPlanet} />
+          <Planets planet="uranus" selectPlanet={this.selectPlanet} />
+          <Planets planet="neptune" selectPlanet={this.selectPlanet} />
+
+        </div>
+      </div>
     )
   }
 }
+
 
 export default App;
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 // const mercury = "https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png";
 // const venus = "https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png";
@@ -9,15 +9,15 @@ import React from 'react';
 // const uranus = "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png";
 // const neptune = "https://solarsystem.nasa.gov/system/stellar_items/list_view_images/90_neptune_480x320.jpg";
 
-const Image =(props)=> {
+// const Image =(props)=> {
 
-return (
-    <div className = "Images">
-    </div>
-)
-}
+// return (
+//     <div className = "Images">
+//     </div>
+// )
+// }
 
-export default Image;
+// export default Image;
 
 // function newFunction() {
 //     var ;
