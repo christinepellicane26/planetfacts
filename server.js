@@ -10,6 +10,10 @@ const path = require('path')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'public')))
+app.use("*", (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+})
+
 
 
 app.listen(process.env.PORT || port, () => {
@@ -59,9 +63,7 @@ app.get('/api/planets/:name', (req, res) => {
 
 // if (process.env.NODE_ENV === 'production') {
 //   
-//   app.use("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
-//   })
+  
 // }
 
   // for (let el in solarSystem){
