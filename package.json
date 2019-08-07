@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "npm": "6.9.0",
+    "node": "12.4.0"
+  },
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run client\"",
     "server": "nodemon server.js",
