@@ -52,6 +52,7 @@ app.get('/api/planets/:name',(req,res)=> {
       res.json(solarSystem[i])
     }
   }
+});
 
   
 if(process.env.NODE_ENV ==='production'){
@@ -68,7 +69,7 @@ if(process.env.NODE_ENV ==='production'){
   //   }
   // }
   
-});
+
 
 // res.send(${data})
 
