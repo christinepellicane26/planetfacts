@@ -9,7 +9,7 @@ const port = 4000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server Started on Port ${port}`);
 });
 
