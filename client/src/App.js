@@ -45,6 +45,18 @@ class App extends Component {
 
         </div>
       </div>
+
+      //for resizing purposes:
+
+{/* <div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png');"></div>
+<div class="img" style="background-image:url('https://solarsystem.nasa.gov/system/stellar_items/list_view_images/90_neptune_480x320.jpg');"></div>    */}
+    
     )
   }
 }
