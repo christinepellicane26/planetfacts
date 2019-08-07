@@ -10,7 +10,7 @@ const path = require('path')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'client/public')));
-app.get('*', (req,res) => {
+app.get('/', (req,res) => {
   res.sendfile(path.join(__dirname+'client/public/index.html'))
 })
 // app.use("*", (req, res) => {
@@ -66,7 +66,7 @@ app.get('/api/planets/:name', (req, res) => {
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
-  app.get('*', (req,res) => {
+  app.get('/', (req,res) => {
     res.sendfile(path.join(__dirname = '../client/build/index.html'))
   })
   
