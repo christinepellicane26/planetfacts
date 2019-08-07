@@ -7,18 +7,19 @@ class Routes extends Component {
         super()
         this.state = {}
     }
-    render() {
-        return (
-            <Switch>
-                <Route path="/planets/:name" render = {(props) => <planet name = {name}/>}/>
+    // render() {
+    //     return (
+    //         <Switch>
 
-                {/* component={this.props.planet} */}
+    //             <Route path="/planets/:name" render = {(props) => <planet name = {name}/>}/>
+
+    //             {/* component={this.props.planet} */}
                 
-                    <Route component>={Planets}</Route>
+    //                 <Route component>={Planets}</Route>
             
-        </Switch>
-                )
-            }
-        }
+    //     </Switch>
+    //             )
+    //         }
+    //     }
             
 export default Routes
