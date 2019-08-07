@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Planets from './planets.js'
+import App from './App.js'
 
 class Routes extends Component {
     constructor() {
         super()
         this.state = {}
     }
-    // render() {
-    //     return (
-    //         <Switch>
+    render() {
+        return (
+            <Switch>
 
-    //             <Route path="/planets/:name" render = {(props) => <planet name = {name}/>}/>
+                <Route path="/planets/:name" render = {(props) => <planet name = {name}/>}/>
 
-    //             {/* component={this.props.planet} */}
+                {/* component={this.props.planet} */}
                 
-    //                 <Route component>={Planets}</Route>
+                <Route path='/:1' component>={App}</Route>
             
-    //     </Switch>
-    //             )
-    //         }
-    //     }
+        </Switch>
+                )
+            }
+        }
             
-// export default Routes
+export default Routes
