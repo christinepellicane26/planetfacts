@@ -13,6 +13,14 @@ app.listen(process.env.PORT || port, () => {
   console.log(`Server Started on Port ${port}`);
 });
 
+if(process.env.NODE_ENV ==='production'){
+  app.use(express.static("client/build"))
+
+  app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"client","build"))
+  })
+}
+
 //planet database
 const solarSystem= [
 {name: 'mercury', radiusmiles: "1,516", year: '88 Earth days', hightemp: '800F', lowtemp: '-290F', type: 'rocky', numberofmoons: 0, img:"https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png"},
