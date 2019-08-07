@@ -22,4 +22,4 @@ class Routes extends Component {
     //         }
     //     }
             
-export default Routes
+// export default Routes
