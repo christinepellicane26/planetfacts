@@ -16,7 +16,7 @@ class Routes extends Component {
 
                 {/* component={this.props.planet} */}
                 
-                <Route path='/:1' component>={App}</Route>
+                <Route path='/' component>={App}</Route>
             
         </Switch>
                 )
