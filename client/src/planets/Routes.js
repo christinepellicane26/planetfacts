@@ -12,7 +12,7 @@ class Routes extends Component {
         return (
             <Switch>
 
-                <Route path="/planets/:name" render = {(props) => <planet name = {name}/>}/>
+                {/* <Route path="/planets/:name" render = {(props) => <planet name = {name}/>}/> */}
 
                 {/* component={this.props.planet} */}
                 
