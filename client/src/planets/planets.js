@@ -21,6 +21,11 @@ class Planets extends Component {
   }
 
   render() {
+    if(!this.state.planets) {
+      return (
+        <div>loading...</div> 
+      )
+    }
     return (
       <div>
       <ul>
