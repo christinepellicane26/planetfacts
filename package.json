@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run dev\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "cd client && npm start",
+    "dev": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Kirk Sullivan",
