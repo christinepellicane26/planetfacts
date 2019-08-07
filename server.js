@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 // const morgan = require('morgan');
 const port = 4000;
+const path = require('path')
 
 
 //Middleware
@@ -13,13 +14,6 @@ app.listen(process.env.PORT || port, () => {
   console.log(`Server Started on Port ${port}`);
 });
 
-if(process.env.NODE_ENV ==='production'){
-  app.use(express.static("client/build"))
-
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"client","build"))
-  })
-}
 
 //planet database
 const solarSystem= [
@@ -58,6 +52,15 @@ app.get('/api/planets/:name',(req,res)=> {
       res.json(solarSystem[i])
     }
   }
+
+  
+if(process.env.NODE_ENV ==='production'){
+  app.use(express.static("client/build"))
+
+  app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"client","build"))
+  })
+}
   
   // for (let el in solarSystem){
   //   if (el.name == planetString){
