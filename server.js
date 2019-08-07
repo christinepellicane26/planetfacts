@@ -57,18 +57,24 @@ app.get('/api/planets/:name',(req,res)=> {
   
 if(process.env.NODE_ENV ==='production'){
   // app.use(express.static("client/build"))
-  app.use(express.static(path.join(__dirname, '../client/build')));
 
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"client","build"))
+  // static file-serving middleware
+  app.use(express.static(path.join(__dirname, '..', 'public')))
+  // any remaining requests with an extension (.js, .css, etc.) send 404
+  app.use((req, res, next) => {
+    if (path.extname(req.path).length) {
+      const err = new Error('Not found')
+      err.status = 404
+      next(err)
+    } else {
+      next()
+    }
+  })
+  // sends index.html
+  app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
 }
-  
-  // for (let el in solarSystem){
-  //   if (el.name == planetString){
-  //     res.json(el);
-  //   }
-  // }
   
 
 
