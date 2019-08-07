@@ -59,9 +59,9 @@ if(process.env.NODE_ENV ==='production'){
   // app.use(express.static("client/build"))
   app.use(express.static(path.join(__dirname, '../client/build')));
 
-  // app.get('*',(req,res)=>{
-  //   res.sendFile(path.resolve(__dirname,"client","build"))
-  // })
+  app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"client","build"))
+  })
 }
   
   // for (let el in solarSystem){
